@@ -12,6 +12,11 @@ http://extendmac.com/EMKeychain/
 **Requirements:**
 * Link your application against the Security frameworks in /System/Library (Carbon is not necessary!)
 
+**Update:**
+This update to the Cocoa wrapper was thought up, written, and published by [Steven Degutis](http://www.degutis.org/).
+The purpose is to merge the EMKeychainProxy class into the EMKeychainItem class as class methods, rather than instance methods.
+Thus, this update both simplifies the wrapper for developers, and uses more conventional Cocoa standards.
+
 Class Overview
 ==============
 
