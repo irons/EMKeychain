@@ -58,21 +58,21 @@ Example Usage
 
 Adding a generic keychain item
 
-[EMGenericKeychainItem addGenericKeychainItemForService:@"SomeApplicationService" withUsername:@"Joe" password:@"SuperSecure!"];
+	[EMGenericKeychainItem addGenericKeychainItemForService:@"SomeApplicationService" withUsername:@"Joe" password:@"SuperSecure!"];
 
 Adding an internet keychain item
 
-[EMInternetKeychainItem addInternetKeychainItemForServer:@"apple.com" withUsername:@"sjobs" password:@"magic" path:@"/httpdocs/" port:21 protocol:kSecProtocolTypeFTP];
+	[EMInternetKeychainItem addInternetKeychainItemForServer:@"apple.com" withUsername:@"sjobs" password:@"magic" path:@"/httpdocs/" port:21 protocol:kSecProtocolTypeFTP];
 
-Note that the "protocol" asks for a SecProtocolType. 
+* Note that the "protocol" asks for a SecProtocolType. 
 
 Working with a keychain item
 
-EMInternetKeychainItem *keychainItem = [EMInternetKeychainItem internetKeychainItemForServer:@"apple.com" withUsername:@"sjobs" path:@"/httpdocs" port:21 protocol:kSecProtocolTypeFTP];
+	EMInternetKeychainItem *keychainItem = [EMInternetKeychainItem internetKeychainItemForServer:@"apple.com" withUsername:@"sjobs" path:@"/httpdocs" port:21 protocol:kSecProtocolTypeFTP];
 
-//Get the password
-NSString *password = [keychainItem password];
+	//Get the password
+	NSString *password = [keychainItem password];
 
-//Change the password and user
-[keychainItem setPassword:@"mynewpass"];
-[keychainItem setUsername:@"phil"];
+	//Change the password and user
+	[keychainItem setPassword:@"mynewpass"];
+	[keychainItem setUsername:@"phil"];
