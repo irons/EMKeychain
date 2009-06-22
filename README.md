@@ -1,9 +1,11 @@
 EMKeychain: A Cocoa Keychain Wrapper
 ====================================
 
-by Brian Amerige of Extendmac, LLC., 12/15/2007
+By Brian Amerige of Extendmac, LLC., 12/15/2007
+
 http://extendmac.com/EMKeychain/
-© Copyright 2007 Extendmac, LLC.  All Rights Reserved.
+
+&copy; Copyright 2007 Extendmac, LLC.  All Rights Reserved.
 
 **Purpose:** To create a cocoa wrapper class (not a bloated framework) to proxy between your application and the unfortunately-carbon based keychain.
 
@@ -16,6 +18,7 @@ http://extendmac.com/EMKeychain/
 This update to the Cocoa wrapper was thought up, written, and published by [Steven Degutis](http://www.degutis.org/).
 The purpose is to merge the EMKeychainProxy class into the EMKeychainItem class as class methods, rather than instance methods.
 Thus, this update both simplifies the wrapper for developers, and uses more conventional Cocoa standards.
+(There are also two new methods for conveniently setting/getting the password of a generic keychain.)
 
 Class Overview
 ==============
