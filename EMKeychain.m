@@ -107,6 +107,7 @@ static BOOL _logErrors;
 	return [self modifyAttributeWithTag:kSecLabelItemAttr toBeString:newLabel];
 }
 - (void)dealloc {
+	if (coreKeychainItem) CFRelease(coreKeychainItem);
 	[myPassword release];
 	[myUsername release];
 	[myLabel release];
