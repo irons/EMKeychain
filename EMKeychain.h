@@ -36,10 +36,12 @@
 + (void)lockKeychain;
 + (void)unlockKeychain;
 + (void)setLogsErrors:(BOOL)flag;
++ (BOOL)deleteKeychainItem:(EMKeychainItem*)kcItem error:(NSError**)error;
 
 - (NSString *)password;
 - (NSString *)username;
 - (NSString *)label;
+- (SecKeychainItemRef)coreKeychainItem;
 - (BOOL)setPassword:(NSString *)newPassword;
 - (BOOL)setUsername:(NSString *)newUsername;
 - (BOOL)setLabel:(NSString *)newLabel;

@@ -1,0 +1,254 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 42;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B572180E104DA34400274F9E /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B572180C104DA34400274F9E /* Carbon.framework */; };
+		B572180F104DA34400274F9E /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B572180D104DA34400274F9E /* Security.framework */; };
+		B5963FD2104F728A00DD3319 /* EMKeychain.m in Sources */ = {isa = PBXBuildFile; fileRef = B5963FD1104F728A00DD3319 /* EMKeychain.m */; };
+		B5AFA0FC1051DB7100554CD6 /* EKTestInternetItems.m in Sources */ = {isa = PBXBuildFile; fileRef = B5AFA0F81051DB7100554CD6 /* EKTestInternetItems.m */; };
+		B5AFA0FD1051DB7100554CD6 /* EKTestGenericItems.m in Sources */ = {isa = PBXBuildFile; fileRef = B5AFA0F91051DB7100554CD6 /* EKTestGenericItems.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		B57217C8104D871700274F9E /* EMKeychainUnitTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EMKeychainUnitTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B57217CA104D871700274F9E /* EMKeychainUnitTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "EMKeychainUnitTests-Info.plist"; sourceTree = "<group>"; };
+		B572180C104DA34400274F9E /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = /System/Library/Frameworks/Carbon.framework; sourceTree = "<absolute>"; };
+		B572180D104DA34400274F9E /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = /System/Library/Frameworks/Security.framework; sourceTree = "<absolute>"; };
+		B5963FD0104F728A00DD3319 /* EMKeychain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMKeychain.h; sourceTree = "<group>"; };
+		B5963FD1104F728A00DD3319 /* EMKeychain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMKeychain.m; sourceTree = "<group>"; };
+		B5AFA0F81051DB7100554CD6 /* EKTestInternetItems.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EKTestInternetItems.m; sourceTree = "<group>"; };
+		B5AFA0F91051DB7100554CD6 /* EKTestGenericItems.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EKTestGenericItems.m; sourceTree = "<group>"; };
+		B5AFA0FA1051DB7100554CD6 /* EKTestGenericItems.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EKTestGenericItems.h; sourceTree = "<group>"; };
+		B5AFA0FB1051DB7100554CD6 /* EKTestInternetItems.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EKTestInternetItems.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B57217C5104D871700274F9E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B572180E104DA34400274F9E /* Carbon.framework in Frameworks */,
+				B572180F104DA34400274F9E /* Security.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B57217AA104D86C900274F9E = {
+			isa = PBXGroup;
+			children = (
+				B5721916104DA3E400274F9E /* EMKeychain */,
+				B5AFA0FF1051DB7A00554CD6 /* Tests */,
+				B57217C9104D871700274F9E /* Products */,
+				B57217CA104D871700274F9E /* EMKeychainUnitTests-Info.plist */,
+				B572180C104DA34400274F9E /* Carbon.framework */,
+				B572180D104DA34400274F9E /* Security.framework */,
+			);
+			sourceTree = "<group>";
+		};
+		B57217C9104D871700274F9E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B57217C8104D871700274F9E /* EMKeychainUnitTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B5721916104DA3E400274F9E /* EMKeychain */ = {
+			isa = PBXGroup;
+			children = (
+				B5963FD0104F728A00DD3319 /* EMKeychain.h */,
+				B5963FD1104F728A00DD3319 /* EMKeychain.m */,
+			);
+			name = EMKeychain;
+			sourceTree = "<group>";
+		};
+		B5AFA0FF1051DB7A00554CD6 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				B5AFA0FA1051DB7100554CD6 /* EKTestGenericItems.h */,
+				B5AFA0F91051DB7100554CD6 /* EKTestGenericItems.m */,
+				B5AFA0FB1051DB7100554CD6 /* EKTestInternetItems.h */,
+				B5AFA0F81051DB7100554CD6 /* EKTestInternetItems.m */,
+			);
+			name = Tests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B57217C7104D871700274F9E /* EMKeychainUnitTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B57217CD104D871800274F9E /* Build configuration list for PBXNativeTarget "EMKeychainUnitTests" */;
+			buildPhases = (
+				B57217C3104D871700274F9E /* Resources */,
+				B57217C4104D871700274F9E /* Sources */,
+				B57217C5104D871700274F9E /* Frameworks */,
+				B57217C6104D871700274F9E /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = EMKeychainUnitTests;
+			productName = EMKeychainUnitTests;
+			productReference = B57217C8104D871700274F9E /* EMKeychainUnitTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B57217AC104D86C900274F9E /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = B57217AF104D86C900274F9E /* Build configuration list for PBXProject "EMKeychainUnitTests" */;
+			compatibilityVersion = "Xcode 2.4";
+			hasScannedForEncodings = 0;
+			mainGroup = B57217AA104D86C900274F9E;
+			productRefGroup = B57217C9104D871700274F9E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B57217C7104D871700274F9E /* EMKeychainUnitTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B57217C3104D871700274F9E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		B57217C6104D871700274F9E /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B57217C4104D871700274F9E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B5963FD2104F728A00DD3319 /* EMKeychain.m in Sources */,
+				B5AFA0FC1051DB7100554CD6 /* EKTestInternetItems.m in Sources */,
+				B5AFA0FD1051DB7100554CD6 /* EKTestGenericItems.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		B57217AD104D86C900274F9E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = Debug;
+		};
+		B57217AE104D86C900274F9E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+			};
+			name = Release;
+		};
+		B57217CB104D871800274F9E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = "$(DEVELOPER_LIBRARY_DIR)/Frameworks";
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/Cocoa.framework/Headers/Cocoa.h";
+				INFOPLIST_FILE = "EMKeychainUnitTests-Info.plist";
+				INSTALL_PATH = "$(USER_LIBRARY_DIR)/Bundles";
+				OTHER_LDFLAGS = (
+					"-framework",
+					Cocoa,
+					"-framework",
+					SenTestingKit,
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = EMKeychainUnitTests;
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		B57217CC104D871800274F9E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				FRAMEWORK_SEARCH_PATHS = "$(DEVELOPER_LIBRARY_DIR)/Frameworks";
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/Cocoa.framework/Headers/Cocoa.h";
+				INFOPLIST_FILE = "EMKeychainUnitTests-Info.plist";
+				INSTALL_PATH = "$(USER_LIBRARY_DIR)/Bundles";
+				OTHER_LDFLAGS = (
+					"-framework",
+					Cocoa,
+					"-framework",
+					SenTestingKit,
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = EMKeychainUnitTests;
+				WRAPPER_EXTENSION = octest;
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B57217AF104D86C900274F9E /* Build configuration list for PBXProject "EMKeychainUnitTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B57217AD104D86C900274F9E /* Debug */,
+				B57217AE104D86C900274F9E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B57217CD104D871800274F9E /* Build configuration list for PBXNativeTarget "EMKeychainUnitTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B57217CB104D871800274F9E /* Debug */,
+				B57217CC104D871800274F9E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B57217AC104D86C900274F9E /* Project object */;
+}
