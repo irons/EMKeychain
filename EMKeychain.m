@@ -82,7 +82,6 @@ static BOOL _logErrors;
 		return NO;
 	
 	[self willChangeValueForKey:@"password"];
-	[myPassword autorelease];
 	myPassword = [newPasswordString copy];
 	[self didChangeValueForKey:@"password"];
 	
@@ -92,7 +91,6 @@ static BOOL _logErrors;
 }
 - (BOOL)setUsername:(NSString *)newUsername {
 	[self willChangeValueForKey:@"username"];
-	[myUsername autorelease];
 	myUsername = [newUsername copy];
 	[self didChangeValueForKey:@"username"];	
 	
@@ -100,7 +98,6 @@ static BOOL _logErrors;
 }
 - (BOOL)setLabel:(NSString *)newLabel {
 	[self willChangeValueForKey:@"label"];
-	[myLabel autorelease];
 	myLabel = [newLabel copy];
 	[self didChangeValueForKey:@"label"];
 	
@@ -108,11 +105,6 @@ static BOOL _logErrors;
 }
 - (void)dealloc {
 	if (coreKeychainItem) CFRelease(coreKeychainItem);
-	[myPassword release];
-	[myUsername release];
-	[myLabel release];
-	
-	[super dealloc];
 }
 @end
 
@@ -172,7 +164,7 @@ static BOOL _logErrors;
 		}
 		return [NSNumber numberWithUnsignedInt:int4];
 	} else {
-		attrString = [[[NSString alloc] initWithBytes:list.attr[0].data length:list.attr[0].length encoding: NSUTF8StringEncoding] autorelease];
+		attrString = [[NSString alloc] initWithBytes:list.attr[0].data length:list.attr[0].length encoding: NSUTF8StringEncoding];
 	}
 
 	SecKeychainItemFreeContent(&list, NULL);
@@ -200,7 +192,7 @@ static BOOL _logErrors;
 		}
 		return nil;
 	}
-	NSString *passwordString = [[[NSString alloc] initWithBytes:password length:passwordLength encoding: NSUTF8StringEncoding] autorelease];
+	NSString *passwordString = [[NSString alloc] initWithBytes:password length:passwordLength encoding: NSUTF8StringEncoding];
 	SecKeychainItemFreeContent(NULL, password);
 
 	usernameString = [self getKeychainAttribute:kSecAccountItemAttr fromItem: item];
@@ -246,7 +238,7 @@ static BOOL _logErrors;
 	return self;
 }
 + (id)genericKeychainItem:(SecKeychainItemRef)item forServiceName:(NSString *)serviceName username:(NSString *)username password:(NSString *)password {
-	return [[[EMGenericKeychainItem alloc] initWithCoreKeychainItem:item serviceName:serviceName username:username password:password] autorelease];
+	return [[EMGenericKeychainItem alloc] initWithCoreKeychainItem:item serviceName:serviceName username:username password:password];
 }
 - (NSString *)serviceName {
 	return myServiceName;
@@ -254,7 +246,6 @@ static BOOL _logErrors;
 
 - (BOOL)setServiceName:(NSString *)newServiceName {
 	[self willChangeValueForKey:@"serviceName"];
-	[myServiceName autorelease];
 	myServiceName = [newServiceName copy];
 	[self didChangeValueForKey:@"serviceName"];	
 	
@@ -296,7 +287,7 @@ static BOOL _logErrors;
 		}
 		return nil;
 	}
-	NSString *passwordString = [[[NSString alloc] initWithBytes:password length:passwordLength encoding: NSUTF8StringEncoding] autorelease];
+	NSString *passwordString = [[NSString alloc] initWithBytes:password length:passwordLength encoding: NSUTF8StringEncoding];
 	SecKeychainItemFreeContent(NULL, password);
 
 	usernameString = [self getKeychainAttribute:kSecAccountItemAttr fromItem: item];
@@ -339,7 +330,7 @@ static BOOL _logErrors;
 	return self;
 }
 + (id)internetKeychainItem:(SecKeychainItemRef)item forServer:(NSString *)server username:(NSString *)username password:(NSString *)password path:(NSString *)path port:(int)port protocol:(SecProtocolType)protocol {
-	return [[[EMInternetKeychainItem alloc] initWithCoreKeychainItem:item server:server username:username password:password path:path port:port protocol:protocol] autorelease];
+	return [[EMInternetKeychainItem alloc] initWithCoreKeychainItem:item server:server username:username password:password path:path port:port protocol:protocol];
 }
 - (NSString *)server {
 	return myServer;
@@ -356,7 +347,6 @@ static BOOL _logErrors;
 
 - (BOOL)setServer:(NSString *)newServer {
 	[self willChangeValueForKey:@"server"];
-	[myServer autorelease];
 	myServer = [newServer copy];	
 	[self didChangeValueForKey:@"server"];
 	
@@ -364,7 +354,6 @@ static BOOL _logErrors;
 }
 - (BOOL)setPath:(NSString *)newPath {
 	[self willChangeValueForKey:@"path"];
-	[myPath autorelease];
 	myPath = [newPath copy];
 	[self didChangeValueForKey:@"path"];
 	
